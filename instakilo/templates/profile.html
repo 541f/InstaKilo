@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<style>
+		.head1{
+			border: solid;
+			height: 80px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head2{
+			height: 70px;
+			margin-top: 5px;
+			background-image: url("{% static 'images/logo1.png' %}");
+			background-size: 100% 100%;
+		}
+		.head3{
+			height: 70px;
+			padding-top: 25px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head4{
+			height: 80px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head41{
+			height: 50px;
+			margin-top: 15px;
+		}
+		.head42{
+			height: 50px;
+			margin-top: 15px;
+		}
+		.head43{
+			height: 50px;
+			margin-top: 15px;	
+		}
+		.pro1{
+			border: solid;
+			height: 250px;
+		}
+		.pro2{
+			border: solid;
+			height: 250px;
+		}
+		.pro21{
+			border: solid;
+			height: 40px;
+		}
+		.pro22{
+			border: solid;
+			height: 150px;
+		}
+		.button{
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		width: 50%;
+    	height: 25px;
+        }
+        .button1{
+    	border-radius: 2px;
+        }
+        .pro3{
+        	border: solid;
+        	height: 400px;
+        }
+	</style>
+</head>
+<body>
+	<div class="row justify-content-center head1">
+		<div class="col-2 head2"></div>
+		<div class="col-4 head3">
+			<center><input type="text" name="search" placeholder="              Search"></center>
+		</div>
+		<div class="col-3 head4">
+			<div class="row justify-content-center">
+				<div class="col-2 head41">
+					<a href="#"><img src="{% static 'images/add1.png' %}" class="img-fluid"></a>
+				</div>
+				<div class="col-2 head42">
+					<a href="{% url 'n6' %}"><img src="{% static 'images/profile1.png' %}" class="img-fluid"></a>
+				</div>
+				<div class="col-2 head43">
+
+					<a href="{% url 'n5' %}"><img src="{% static 'images/logout.png' %}" class="img-fluid"></a>
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<div class="row justify-content-center">
+		<div class="col-2 pro1">
+			<img src="{% static 'images/dp.png' %}" class="rounded-circle img-fluid" alt="Responsive image"><br>
+			<center><button class="button button2 btn-primary">Edit</button></center>
+		</div>
+		<div class="col-7 pro2">
+			<div class="row">
+				<div class="col-4 pro21"></div>
+				<div class="col-4 pro21">
+					<center><button class="button button2 btn-primary">Follow</button></center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col pro21">
+					<div class="row">
+						<div class="col-2 pro21">
+							{% if user.is_authenticated %}
+    <p>Welcome, {{ user.get_username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
+							<p class="font-weight-bold">125 posts</p>
+						</div>
+						<div class="col-2 pro21">
+							<p class="font-weight-bold">498 followers</p>
+						</div>
+						<div class="col-2 pro21">
+							<p class="font-weight-bold">28 following</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col pro22">
+					<p class="font-weight-bold">This is just a test profile, but this guy really exists.
+					He likes photography and his wallet is really heavy. His other tallents include sketching, rapping, fitness etc.</p>
+					<p>#fitness #photography #sketching #rapping #food #travel</p>
+					<a href="www.google.com">Search me on...</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-center">
+		<div class="col-10 pro3">
+			a
+		</div>
+	</div>
+
+	
+
+
+
+
+
+
+</body>
+</html>

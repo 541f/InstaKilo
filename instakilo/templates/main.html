@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instakilo</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	<style>
+		.head1{
+			border: solid;
+			height: 80px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head2{
+			height: 70px;
+			margin-top: 5px;
+			background-image: url("{% static 'images/logo1.png' %}");
+			background-size: 100% 100%;
+		}
+		.head3{
+			height: 70px;
+			padding-top: 25px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head4{
+			height: 80px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.head41{
+			height: 50px;
+			margin-top: 15px;
+		}
+		.head42{
+			height: 50px;
+			margin-top: 15px;
+		}
+		.head43{
+			height: 50px;
+			margin-top: 15px;
+			
+		}
+		.main{
+			height: 645px;
+		}
+		.main1{
+			height: 645px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.main2{
+			border: solid;
+			height: 645px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.main22{
+			height: 70px;
+		}
+		.main221{
+			padding-top: 10px;
+			height: 70px;
+		}
+		.main222{
+			border: solid;
+			height: 70px;
+			border-color: grey;
+			border-width: 1px;
+			margin-top: 5px;
+		}
+		.main23{
+			border: solid;
+			height: 180px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.main231{
+			height: 30px;
+		}
+		.main232{
+			height: 50px;
+		}
+		.main233{
+			height: 50px;
+		}
+		.main234{
+			height: 50px;
+		}
+		.main24{
+			border: solid;
+			height: 130px;
+			border-color: grey;
+			border-width: 1px;
+		}
+		.main241{
+			height: 30px;
+			margin-bottom: 10px;
+		}
+		.main243{
+			height: 50px;
+		}
+		.main25{
+			height: 70px;
+		}
+		.button{
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		cursor: pointer;
+		width: 50%;
+    	height: 20px;
+        }
+        .button1{
+    	border-radius: 2px;
+        }
+	</style>
+</head>
+<body>
+	<div class="row justify-content-center head1">
+		<div class="col-2 head2"></div>
+		<div class="col-4 head3">
+			<center><input type="text" name="search" placeholder="              Search"></center>
+		</div>
+		<div class="col-3 head4">
+			<div class="row justify-content-center">
+				<div class="col-2 head41">
+					<a href="#"><img src="{% static 'images/add1.png' %}" class="img-fluid"></a>
+				</div>
+				<div class="col-2 head42">
+					<a href="{% url 'n6' %}"><img src="{% static 'images/profile1.png' %}" class="img-fluid"></a>
+				</div>
+				<div class="col-2 head43">
+
+					<a href="{% url 'n5' %}"><img src="{% static 'images/logout.png' %}" class="img-fluid"></a>
+				</div>
+			</div>
+		</div>
+	</div><br>
+	<div class="row justify-content-center main">
+		<div class="col-5 main1">
+			<div style="height:650px; width:630px; position:relative;">
+				<div style=" max-height:100%; overflow:auto; border:1px solid black;">
+					{% for i in c %}
+					<div  style="height:500px; border:5px;"><img src="{% static 'images/stag.jpg' %}" class="img-fluid" alt="Responsive image">
+						<div class="col-5">
+							<button type="button" class="btn btn-default btn-mini">
+								❤</button>
+						</div>
+					</div><br>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<div class="col-2 main2">
+			<div class="col main22">
+				<div class="row">
+					<div class="col-5 main221">
+						<img src="{% static 'images/dp.png' %}" class="rounded-circle img-fluid" alt="Responsive image">
+					</div>
+					<div class="col-6 main222"></div>
+				</div>
+			</div><br>
+			<div class="col main23">
+				<div class="col main231">
+					<p class="text-muted">Stories</p>
+				</div>
+				<div class="row">
+					<div class="col-5 main232">
+						<img src="{% static 'images/eye.png' %}" class="rounded-circle img-fluid" alt="Responsive image">
+					</div>
+					<div class="col"><p>gator_boi</p></div>
+				</div>
+				<div class="row">
+					<div class="col-5 main232">
+						<img src="{% static 'images/girl.png' %}" class="rounded-circle img-fluid" alt="Responsive image">
+					</div>
+					<div class="col"><p>iam_audrey</p></div>
+				</div>
+				<div class="row">
+					<div class="col-5 main232">
+						<img src="{% static 'images/dota.png' %}" class="rounded-circle img-fluid" alt="Responsive image">
+					</div>
+					<div class="col"><p>dota_2</p></div>
+				</div><br>
+			<div class="col main24">
+				<div class="col main241">
+					<p class="text-muted">Suggested for you</p>
+				</div>
+				<div class="row">
+					<div class="col main243">
+						<img src="{% static 'images/dp.png' %}" class="rounded-circle img-fluid" alt="Responsive image">
+					</div>
+					<div class="col main243"><p>same_guy1</p></div>
+					<div class="col main243"><center><button class="button button2 btn-primary">Follow</button></center></div>
+				</div>
+			</div><br>
+			<div class="col main25">
+				<p class="text-muted"><small>
+					<a href="#">ABOUT US - </a>
+					<a href="#">HELP - </a>
+					<a href="#">PRESS - </a>
+					<a href="#">API - </a>
+					<a href="#">JOBS - </a>
+					<a href="#">PRIVACY - </a>
+					<a href="#">TERMS - </a>
+					<a href="#">DIRECTORY - </a>
+					<a href="#">PROFILES - </a>
+					<a href="#">HASHTAGS - </a>
+					<a href="#">LANGUAGE - </a>
+					MADE BY THE SAIF
+				</small></p>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

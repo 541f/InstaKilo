@@ -1,0 +1,157 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<style>
+	.bod{
+		margin-top: 40px;
+		height: 700px;
+	}
+	.bod0{
+		height: 600px;
+		margin-top: 55px;
+		margin-bottom: 60px;
+		background-image: url("{% static 'images/iphone.png' %}");
+		background-size: 100% 100%;
+	}
+	.bod1{
+		border: solid;
+		border-color: grey;
+		border-width: 1px;
+		margin-top: 40px;
+		height: 680px;
+	}
+	.bod2{
+		margin-top: 40px;
+		height: 75px;
+		background-image: url("{% static 'images/logo1.png' %}");
+		background-size: 100% 100%;
+	}
+	.bod3{
+		height: 50px;
+		font-weight: bold;
+	}
+	}
+	.bod31{
+		height: 20px;
+	}
+	.bod4{
+		height: 370px;
+	}
+	.bod41{
+		height: 30px;
+	}
+	.bod42{
+		height: 150px;
+	}
+	.bod43{
+		height: 30px;
+	}
+	.bod44{
+		height: 60px;
+		background-image: url("{% static 'images/appstore.png' %}");
+		background-size: 100% 100%;
+	}
+	.bod45{
+		height: 60px;
+		background-image: url("{% static 'images/google-play.png' %}");
+		background-size: 100% 100%;
+	}
+	.button {
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		width: 100%;
+    	height: 30px;
+	}
+    .button1 {
+    	border-radius: 2px;
+    }
+    .form {
+    	width: 100%;
+    	margin-bottom: 5px;
+    	padding: 8px 12px;
+    	border: 1px solid #dbdbdb;
+    	box-sizing: border-box;
+    	border-radius: 3px;
+    }
+    
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row justify-content-center">
+		<div class="col-3 bod">
+			<div class="col bod0">
+			</div>
+		</div>
+		<div class="col-3 bod1">
+			<div class="col justify-content-center bod2"></div>
+			<div class="col justify-content-center bod3">
+				<p align="center" class="text-muted">Sign up to see photos and videos from your friends.</p>
+			</div>
+			<div class="col justify-content-center bod3">
+				<button class="button button2 btn-primary">Log in with Facebook</button>
+			</div>
+			<div class="col justify-content-center bod31">
+				<small><p align="center" class="text-muted">--------------- OR ---------------</p></small>
+			</div>
+			<div class="col justify-content-center bod4">
+				<form method="POST" enctype="multipart/form-data">{%csrf_token%}
+					<div class="form">
+						<input class="form-control" type="text" name="email" placeholder="Mobile Number Or Email"><br>
+						<input class="form-control" type="text" name="fnm" placeholder="Full Name"><br>
+						<input class="form-control" type="text" name="unm" placeholder="Username"><br>
+						<input class="form-control" type="password" name="ps" placeholder="Password"><br>
+						<button class="button button2 btn-primary">Sign Up</button><br>
+						<p align="center" class="text-muted"><small>By signing up, you agree to our <a href="#">Terms , </a><a href="#">Data Policy</a> and <a href="#">Cookies Policy</a>.</small></p>
+					</div>
+				</form>
+			</div>
+			<div class="col justify-content-center bod41">
+				<p align="center" class="text-muted">Have an account? <a href="{% url 'n2' %}">Log in</a>.</p>
+			</div><br><br>
+			<div class="col justify-content-center bod42">
+				<div class="col justify-content-center bod43"><center>Get the app.</center></div>
+				<div class="row justify-content-around">
+					<div class="col bod44"></div>
+					<div class="col bod45 offset-md-1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br><br><br><br><br>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#">ABOUT US<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">HELP</a>
+      <a class="nav-item nav-link" href="#">PRESS</a>
+      <a class="nav-item nav-link" href="#">API</a>
+      <a class="nav-item nav-link" href="#">JOBS</a>
+      <a class="nav-item nav-link" href="#">PRIVACY</a>
+      <a class="nav-item nav-link" href="#">TERMS</a>
+      <a class="nav-item nav-link" href="#">DIRECTORY</a>
+      <a class="nav-item nav-link" href="#">PROFILES</a>
+      <a class="nav-item nav-link" href="#">HASHTAGS</a>
+      <a class="nav-item nav-link" href="#">LANGUAGE</a>
+      <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><small>Made by THE SAIF</small></a>
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>
+
+
+
